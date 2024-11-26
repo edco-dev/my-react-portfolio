@@ -1,0 +1,827 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    color: #0f172a;
+}
+
+.dark .dashboard{
+
+        color: #e2e8f0; /* Text color for dark mode */
+      
+}
+.sidebarContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebarTitle {
+    font-size: 1.5rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #0f172a;
+    cursor: pointer;
+}
+
+.list li:hover {
+    color: #38bdf9;
+}
+
+.mainContent {
+    border-radius: 8px;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.title {
+    font-weight: bolder;
+    color: #151b23;
+    margin-bottom: 20px;
+    font-size: 3rem; /* Adjust size for large screens */
+  line-height: 1.2;
+  word-wrap: break-word;
+  white-space: nowrap; /* Prevent text from wrapping at spaces */ /* Allows breaking into multiple lines */
+  
+}
+
+.dark .title {
+    color: #e2e8f0; /* Text color for dark mode */
+  }
+    .description {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        color: #151b23;
+        font-weight: 500;
+        margin: 20px 0; /* Remove auto and make it 0 on the horizontal axis */
+        text-align: left; /* Ensure the text is aligned to the left */
+    }
+
+
+.dark .description{
+
+        color: #e2e8f0; /* Text color for dark mode */
+      
+}
+
+.formoreinfo {
+    font-family: 'InterVariable', system-ui, sans-serif;
+    font-size: 1.2rem;
+    color: #38bdf9;
+    margin-top: 15rem;
+}
+
+.highlight {
+    color: #38bdf9;
+    font-weight: bold;
+}
+
+.pageIndicator {
+    font-size: 1.5rem;
+    color: #151b23;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.dark .pageIndicator{
+
+        color: #e2e8f0; /* Text color for dark mode */
+      
+}
+
+.changeList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.changeItem {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.changeItem::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: -20px;
+    width: 1px;
+    background-color: #3d444d;
+    z-index: 0;
+}
+
+.bullet {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #3d444d;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.skillName {
+    font-size: 13px;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.skillDescription {
+    font-size: 11px;
+    color: #505b6b;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.projectName {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.projectDescription {
+    font-size: 11px;
+    color: #505b6b;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.dark .projectDescription{
+    color: #94a3b8;
+    font-family: 'InterVariable', system-ui, sans-serif;
+    font-size: 12px;
+}
+
+.dark .bullet{
+    background-color: #f1f5f9;
+}
+.horizontalLine {
+    width: 100%;
+    height: 1px;
+    background-color: #3d444d;
+    margin: 20px 0;
+}
+
+.showMoreButton {
+    background: none;
+    color: #0ca5e9;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.toggleIcon {
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 0.7rem;
+    color: #555; /* Adjust for theme */
+    transition: transform 0.2s ease;
+  }
+
+  .toggleIcon:hover{
+    color: #5046e5; /* Adjust for theme */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transform: scale(1.55);
+
+  }
+
+
+  .dark .toggleIcon{
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 8px;
+        font-size: 0.7rem;
+        color: #ffffff; /* Adjust for theme */
+        transition: transform 0.2s ease;
+      
+  }
+
+  .dark .toggleIcon:hover{
+    color: #0ca5e9; /* Adjust for theme */
+  }
+  
+  .itemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+/* Mobile layout (1 column) */
+@media (max-width: 768px) {
+
+    .modalContent{
+        font-size: 8px;
+    }
+
+    .dashboard {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px; /* Add padding on the sides */
+    }
+
+    .sidebarContainer,
+    .mainContent {
+        margin: 0 0 20px; /* Add bottom margin for spacing between sections */
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%; /* Ensure the sidebar takes full width within padding */
+        margin: 0; /* Reset any unwanted margin */
+        padding: 20px; /* Add consistent internal spacing */
+        box-sizing: border-box; /* Ensure padding doesn't exceed width */
+    }
+
+
+}
+/* Ensure the button is fully disabled */
+button:disabled {
+    padding: 10px 20px;               /* px-5 py-2.5 */
+    border-radius: 8px;               /* rounded-lg */
+    color: white;                     /* text-white */
+    font-size: 0.875rem;               /* text-sm */
+    letter-spacing: 0.05em;           /* tracking-wider */
+    font-weight: 500;                 /* font-medium */
+    border: 1px solid currentColor;  /* border border-current */
+    outline: none;                    /* outline-none */
+    background-color: #c4c4c4;       /* Light border */
+    cursor: not-allowed;        /* Show a "not-allowed" cursor */
+    pointer-events: none;       /* Disable any interactions (click, hover, etc.) */
+    transition: none;     
+    border: none;      /* Disable transition effects */
+  }
+
+  .dark button:disabled {
+    padding: 10px 20px;               /* px-5 py-2.5 */
+    border-radius: 8px;               /* rounded-lg */
+    color: white;                     /* text-white */
+    font-size: 0.875rem;               /* text-sm */
+    letter-spacing: 0.05em;           /* tracking-wider */
+    font-weight: 500;                 /* font-medium */
+    border: 1px solid currentColor;  /* border border-current */
+    outline: none;                    /* outline-none */
+    background-color: #c4c4c4;       /* Light border */
+    cursor: not-allowed;        /* Show a "not-allowed" cursor */
+    pointer-events: none;       /* Disable any interactions (click, hover, etc.) */
+    transition: none;     
+    border: none;      /* Disable transition effects */
+  }
+  
+@media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column; /* Stack vertically */
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+      
+    
+    .mainContent {
+      order: 1; /* About Me comes first */
+    }
+
+    .latestChanges {
+      order: 1; /* Latest Projects */
+    }
+
+    .sidebarContainer {
+      order: 3; /* Skills */
+    }
+
+    footer{
+        order: 4; /* Top Repositories */
+
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem; /* Adjust for mobile */
+      line-height: 1.4;
+    }
+  }
+
+.latestProjectsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dark .latestProjectsHeader{
+    
+        color: #e2e8f0; /* Text color for dark mode */
+      
+}
+
+.dark .changeList{
+    color: #e2e8f0; 
+}
+.addProjectButton {
+    background-color: #151b23;
+    color: white;
+    font-family: 'InterVariable', system-ui, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addProjectButton:hover {
+    background-color: #5046e5;
+}
+
+.projectActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.editText:hover, .deleteText:hover {
+    text-decoration: underline;
+}
+
+.projectDescription {
+    margin-bottom: 8px;
+}
+
+/* Home.module.css */
+/* Align "Top Skills" and "Add Skill" button on the same row */
+.skillsHeader {
+    display: flex;
+    justify-content: space-between; /* Space between title and button */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+.sidebarTitle {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.dark .sidebarTitle{
+    color: #e2e8f0;
+}
+
+.addSkillButton {
+    background-color: #151b23;
+    color: white;
+    font-family: 'InterVariable', system-ui, sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.projectActions {
+    margin-top: 10px;
+}
+
+.editIcon, .deleteIcon {
+    cursor: pointer;
+    margin-right: 10px;
+    color: #1e293b; /* Blue color for edit/delete */
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.dark .editIcon{
+    color: #e2e8f0;
+}
+
+.dark .deleteIcon{
+    color: #e2e8f0;
+}
+.editIcon:hover, .deleteIcon:hover {
+    
+    transform: scale(1.55);
+}
+
+  
+  
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add background and blur effect */
+    background: rgba(208, 198, 198, 0.01); /* Semi-transparent white */
+    backdrop-filter: blur(7px); /* Apply the blur effect */
+}
+
+/* Wrapper for the entire project list to handle show more/show less */
+.projectListWrapper {
+  max-height: 0; /* Initially hide the list */
+  overflow: hidden; /* Hide overflowing content */
+  transition: max-height 2s ease-out; /* Smooth transition for the list */
+}
+
+
+
+/* Expanded state for the project list */
+.projectListWrapper.expanded {
+  max-height: 1000px; /* Set to a large value to show all projects */
+}
+
+.skillListWrapper {
+    max-height: 0; /* Initially hide the list */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 2s ease-out; /* Smooth transition for the list */
+  }
+  /* Footer styles */
+/* Footer styles */
+.footer {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background-color: transparent; /* Make the background transparent */
+    color: var(--footer-text-color, #1e293b); /* Text color */
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .footerContent {
+    max-width: 1200px; /* Limit the width for larger screens */
+    padding: 0 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'InterVariable', system-ui, sans-serif;
+  }
+  
+  .dark .footer p{
+color: #e2e8f0;
+  }
+  .footer a {
+    color: var(--footer-link-color, #ccc); /* Link color */
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .footer a:hover {
+    color: var(--footer-link-hover-color, #fff); /* Hover color */
+    text-decoration: underline;
+  }
+  
+  .socialLinks {
+    margin-top: 10px;
+  }
+  
+  /* Optional: Responsive styling for small screens */
+  @media (max-width: 600px) {
+    .footer {
+      padding: 15px 0;
+    }
+  
+    .footerContent {
+      padding: 0 10px;
+    }
+  }
+  
+  
+  
+  
+  /* Expanded state for the project list */
+  .skillListWrapper.expanded {
+    max-height: 1000px; /* Set to a large value to show all projects */
+  }
+
+/* Style for each project description */
+.projectDescription {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #555;
+}
+
+/* For the toggle button */
+
+/* Expand/collapse icon (Chevron up/down) */
+.toggleIcon {
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* When the description is expanded, rotate the icon */
+.toggleIcon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Styles for project actions (edit and delete) */
+.projectActions {
+  margin-top: 10px;
+}
+
+.projectActions .editIcon, .projectActions .deleteIcon {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.editIcon:hover, .deleteIcon:hover {
+  color: #007BFF;
+}
+
+.modalContent {
+    background-color: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.3s ease-in-out;
+    font-size: 10px;
+}
+
+.dark .modalContent{
+    background: #1e293b;
+    color: #e2e8f0;
+}
+
+.showMoreButton {
+    background-color: #7c3aed; /* Violet background (bg-violet-500) */
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.375rem; /* Tailwind default border-radius */
+    border: none;
+    font-weight: 500; /* Equivalent to font-medium in Tailwind */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition for background and scale */
+  }
+  
+  .showMoreButton:hover {
+    background-color: #6b2b8b; /* Slightly darker violet (hover:bg-violet-600) */
+  }
+  
+  .showMoreButton:active {
+    background-color: #5a1e72; /* Even darker violet (active:bg-violet-700) */
+    transform: scale(0.98); /* Slight scale effect on active state */
+  }
+  
+  .showMoreButton:focus {
+    outline: none; /* Removes default outline on focus */
+
+  }
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input,
+textarea {
+    font-family: 'InterVariable', system-ui, sans-serif;
+    width: 100%;
+    background-color: #ffffff;
+    color: #334155;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #e5e9ed;
+    border-radius: 6px;
+    font-size: 12px;
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.dark input {
+    background-color: #233144;
+    border: none;
+    color: #e2e8f0;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.dark
+textarea {
+    background-color: #233144;
+    border: none;
+    color: #e2e8f0;
+    font-family: 'InterVariable', system-ui, sans-serif;
+}
+
+.dark input:focus {
+    font-family: 'InterVariable', system-ui, sans-serif;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    color: #e2e8f0;
+}
+
+.dark textarea:focus {
+    font-family: 'InterVariable', system-ui, sans-serif;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    color: #e2e8f0;
+}
+
+input:focus,
+textarea:focus {
+    font-family: 'InterVariable', system-ui, sans-serif;
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    color: #334155;
+}
+
+.modalButton {
+    align-self: flex-end;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #5046e5;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark .modalButton{
+    background-color: #0ca5e9;
+    color: #e2e8f0;
+}
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 15px; /* Adds space above the button group */
+}
+
+.buttonContainer {
+  display: flex;              /* Use flexbox to arrange buttons horizontally */
+  justify-content: flex-start; /* Align buttons from left to right */
+  gap: 10px;                  /* Space between the buttons */
+}
+
+.messageButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #151b23;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.modalButtonCancel {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  background-color: #151b23;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
+.addProjectButton,
+.addSkillButton,
+.contactButton {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5046e5;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark .addProjectButton{
+    background-color: #0ca5e9 ;
+}
+
+.dark .addSkillButton{
+    background-color: #0ca5e9 ;
+}
+
+.addProjectButton:hover,
+.addSkillButton:hover,
+.contactButton:hover,
+.messageButton:hover,
+.modalButton:hover {
+    background-color: #5046e5;
+  transform: scale(1.05);
+}
+
+.modalButtonCancel:hover{
+    transform: scale(1.05);
+}
+
+.dark .modalButtonCancel{
+    border: 1px solid #151b23;
+    margin-top: 20px;
+}
+.dark .contactButton:hover{
+    background-color: #5046e5;
+}
+
+/* Message Button */
+.messageButton {
+    background-color: #5046e5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
+}
+
+.dark .contactButton{
+    background-color: #0ca5e9 ;
+
+}
+
+/* Close Button */
+.closeButton {
+    background-color: #d21111;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+
+.closeButton:hover {
+    background-color: #5046e5;
+  transform: scale(1.05);
+}
+
+/* Common container for the project actions */
+
+/* Disabled state for both icons */
+.disabled {
+  opacity: 0.5; /* Dim the icons to indicate that they are disabled */
+  cursor: not-allowed; /* Show a "not allowed" cursor */
+  pointer-events: none; /* Disable any mouse interactions */
+}
+

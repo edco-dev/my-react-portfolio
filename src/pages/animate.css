@@ -1,0 +1,4 @@
+/* Add this to your CSS module (e.g., Home.module.css) or in a global CSS file */
+.animate__slideInUp {
+    animation-duration: 3.5s !important; /* Adjust the duration as needed */
+  }
