@@ -89,7 +89,7 @@ const toggleItem = (id: string) => {
   }, []);
   const fetchProjects = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/projects');
+      const response = await axios.get('https://react-portfolio-backend-e6vg.onrender.com/projects');
       setProjects(response.data);
     } catch (error) {
       console.error('Error fetching projects:', error);
@@ -98,7 +98,7 @@ const toggleItem = (id: string) => {
 
   const fetchSkills = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/skills');
+      const response = await axios.get('https://react-portfolio-backend-e6vg.onrender.com/skills');
       setSkills(response.data);
     } catch (error) {
       console.error('Error fetching skills:', error);
@@ -177,7 +177,7 @@ const toggleItem = (id: string) => {
   
     try {
       // Send the request and ignore the response
-      await axios.post('http://localhost:5001/contact', contactForm);
+      await axios.post('https://react-portfolio-backend-e6vg.onrender.com/contact', contactForm);
   
       alert('Message sent successfully!');
       setContactForm({ name: '', email: '', message: '' });
