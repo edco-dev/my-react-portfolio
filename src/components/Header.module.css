@@ -48,7 +48,9 @@
   height: 20px;
 }
 
-
+ .dark .darkModeButton:hover{
+  transform: scale(1.25);
+}  
 /* Social Links Hover Effect */
 .socialLinks li a:hover {
   background-color: rgba(0, 123, 255, 0.1); /* Blue hover background */
@@ -56,6 +58,7 @@
 .dark .downloadButton { /* Dark background for button */
   color: white; /* Text color for the button */
   border: none;
+  background-color: #0ca5e9;
 
 }
 /* DOWNLOAD CV BUTTON */
@@ -150,10 +153,7 @@ img{
   background-color: rgba(0, 123, 255, 0.1);
 }
 
-.dark .darkModeButton:hover{
-  background-color: rgba(0, 123, 255, 0.1);
-  color: #5046e5;
-}
+
 
 
 /* RESPONSIVENESS */
@@ -163,7 +163,14 @@ img{
     display: none;
   }
 
- 
+  .dark .darkModeButton:hover{
+    transform: scale(1.25);
+  }
+
+  .dark .downloadButton:hover{
+    transform: scale(1.25);
+  }  
+  
   .mobileMenu.open {
     transform: translateY(0); /* Slide in from the top */
     opacity: 1; /* Fade-in effect */
@@ -194,7 +201,38 @@ img{
 
   .downloadButton {
     margin-left: auto;
+    background: transparent;
+    color: #151b23;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;    
+    font-size: 20px;
+    justify-content: center;  /* Center the icon horizontally */
+    align-items: center;      /* Center the icon vertically *        /* Adjust icon size */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
   }
+
+  .dark  .downloadButton {
+    margin-left: auto;
+    background: transparent;
+    color: #151b23;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;    
+    font-size: 20px;
+    justify-content: center;  /* Center the icon horizontally */
+    align-items: center;      /* Center the icon vertically *        /* Adjust icon size */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  
+  }
+
 
   .downloadButton span{
     display: none;
@@ -210,20 +248,6 @@ img{
     transform: scale(1.25);
   }
 
-  .downloadButton {
-    background: transparent;
-    color: #151b23;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;    
-    font-size: 20px;
-    justify-content: center;  /* Center the icon horizontally */
-    align-items: center;      /* Center the icon vertically *        /* Adjust icon size */
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
 
  
   

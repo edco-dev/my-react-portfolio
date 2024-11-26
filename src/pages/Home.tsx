@@ -16,9 +16,9 @@ const Home: React.FC<HomeProps> = ({ isDarkMode }) => {
   const [darkMode, setDarkMode] = useState<boolean>(isDarkMode);
 
   // Toggle dark/light mode
-  const toggleMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-  };
+  // const toggleMode = () => {
+  //   setDarkMode((prevMode) => !prevMode);
+  // };
 
   // Use useEffect to apply dark/light mode class to the body element
   useEffect(() => {
@@ -48,7 +48,7 @@ const Home: React.FC<HomeProps> = ({ isDarkMode }) => {
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' }); // Contact form data
 
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({}); // State for tracking expanded items
-  const [contentHeights, setContentHeights] = useState<{ [key: string]: number }>({});
+  // const [contentHeights, setContentHeights] = useState<{ [key: string]: number }>({});
   const [isDisabled, setIsDisabled] = useState(true);
 
   
