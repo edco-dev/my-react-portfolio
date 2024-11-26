@@ -269,7 +269,7 @@ const toggleItem = (id: string) => {
         </div>
       </aside>
 
-      {/* Main Contents */}
+      {/* Main Contents s*/}
       <main className={styles.mainContent}>
         
         <h2 className={styles.pageIndicator}>About me</h2>
